@@ -1,0 +1,18 @@
+[data-name = "iframe-projector"]
+{
+    position: fixed;
+    top: 25%;
+    width: 100%;
+    z-index: 999;
+    transition: height .8s;
+}
+
+[data-name = "iframe-projector"][data-open = false]
+{
+    height: 0px;
+}
+
+[data-name = "iframe-projector"][data-open = true]
+{
+    height: 300px;
+}

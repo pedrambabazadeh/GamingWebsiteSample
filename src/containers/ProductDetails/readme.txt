@@ -1,0 +1,1 @@
+Use grid-area-template to achieve the responsive UI in this section

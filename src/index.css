@@ -1,0 +1,365 @@
+:root{
+  /* colours*/
+  --primary-color: #002e2e;
+  --darker_primary-color: #001717;
+  --secondary-color: 	#FF1468;
+  --very_dark-color: 	#1b1c1c;
+  --border_primary-color: #009793;
+  --shadow_primary-color: #009793;
+  --shadow_secondary-color: #FF1468;
+  --neon_light-color: #ffffff;
+  --light-text: #ffffff;
+  --menu_background-color: #1b1c1c81;
+
+  /* sizing and placing*/
+  --xxs_boxing-size: 5px;
+  --xs_boxing-size: 5px;
+  --sm_boxing-size: 10px;
+  --md_boxing-size: 15px;
+  --lg_boxing-size: 20px;
+  --xl_boxing-size: 25px;
+  --xxl_boxing-size: 40px;
+
+  /*styling*/
+  --xs_radius-size: 5px;
+  --sm_radius-size: 10px;
+
+  /* timing*/
+  --main_transition-time: 1500ms;
+
+  /* shadowing*/
+
+  --md_primary-shadow: 2px 2px 5px var(--shadow_primary-color), -2px -2px 5px var(--shadow_primary-color);
+  --md_secondary-shadow: 2px 2px 5px var(--shadow_secondary-color), -2px -2px 5px var(--shadow_secondary-color)
+
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--very_dark-color);
+}
+
+section
+{
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+img
+{
+  max-width: 90%;
+}
+
+
+span{
+  padding: 0;
+}
+
+/* Grid system*/
+
+.grid-container
+{
+ display: grid;
+}
+
+[data-padding-top = "xxl"]
+{
+  padding-top:var(--xxl_boxing-size);
+}
+[data-padding-x = "xs"]
+{
+  padding-left:var(--xs_boxing-size);
+  padding-right:var(--xs_boxing-size);
+}
+[data-padding-x = "sm"]
+{
+  padding-left:var(--sm_boxing-size);
+  padding-right:var(--sm_boxing-size);
+}
+
+[data-padding = "sm"]
+{
+  padding:var(--sm_boxing-size);
+}
+
+[data-padding = "xs"]
+{
+  padding:var(--xs_boxing-size);
+}
+
+[data-margin-top = "xl"]
+{
+  margin-top:var(--xl_boxing-size)!important;
+}
+[data-margin-bottom = "xs"]
+{
+  margin-bottom:var(--xs_boxing-size)!important;
+}
+[data-margin-left = "xs"]
+{
+  margin-left: var(--xs_boxing-size)!important;
+}
+[data-margin-left = "sm"]
+{
+  margin-left: var(--sm_boxing-size)!important;
+}
+
+[data-z-index = "min"]
+{
+  z-index: -999;
+}
+[data-z-index = "max"]
+{
+  z-index: 999;
+}
+[data-radius = "sm"]
+{
+  border-radius: var(--sm_radius-size);
+}
+[data-transition = "main"]
+{
+  transition-duration: var(--main_transition-time);
+  transition-timing-function: ease;
+}
+
+[data-overflow = "hidden"]
+{
+  overflow: hidden;
+}
+
+/* colours */
+
+[data-text ~= "light"]
+{
+  color : var(--light-text);
+}
+
+[data-text ~= "#ffffff"]
+{
+  color: #ffffff;
+}
+
+a
+{
+  color: inherit;
+  text-decoration: unset;
+}
+
+a:hover
+{
+  text-decoration: unset;
+}
+
+a:visited
+{
+  color: unset;
+  text-decoration: unset;
+}
+
+/* typography*/
+
+[data-text ~= "center"]
+{
+  text-align : center;
+}
+[data-text ~= "md-primary-shadow"]
+{
+  text-shadow: var(--md_primary-shadow);
+}
+[data-text ~= "right"]
+{
+  text-align: right;
+}
+[data-text ~= "left"]
+{
+  text-align: left;
+}
+[data-text ~= "center"]
+{
+  text-align: center;
+}
+
+
+/* Box styles*/
+
+[data-box ~= "md-secondary-shadow"]
+{
+  box-shadow : var(--md_secondary-shadow)
+}
+[data-box ~= "md-primary-shadow"]
+{
+  box-shadow : var(--md_primary-shadow)
+}
+
+/* Arrangement*/
+
+[data-arrange ~= "grid"]
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Borders */
+
+[data-border ~= "md-neon-border"]
+{
+  border: 2px solid var(--neon_light-color);
+}
+[data-border ~= "bottom-md-neon-border"]
+{
+  border-bottom: 2px solid var(--neon_light-color);
+}
+[data-border ~= "top-md-neon-border"]
+{
+  border-top: 2px solid var(--neon_light-color);
+}
+[data-border ~= "left-md-neon-border"]
+{
+  border-left: 2px solid var(--neon_light-color);
+}
+[data-border ~= "right-md-neon-border"]
+{
+  border-right: 2px solid var(--neon_light-color);
+}
+[data-border ~= "x-md-neon-border"]
+{
+  border-left: 2px solid var(--neon_light-color);
+  border-right: 2px solid var(--neon_light-color);
+}
+[data-border ~= "y-md-neon-border"]
+{
+  border-bottom: 2px solid var(--neon_light-color);
+  border-bottom: 2px solid var(--neon_light-color);
+}
+
+[data-border ~= "sm-radius"]
+{
+  border-radius: var(--sm_radius-size);
+}
+
+/* view*/
+
+[data-view ~= 'fixed']
+{
+  position: fixed
+}
+[data-view ~= "relative"]
+{
+  position: relative
+}
+[data-view ~= "absolute"]
+{
+  position: absolute
+}
+[data-view ~= "sticky"]
+{
+  position: sticky;
+}
+[data-view ~= "flex"]
+{
+  display: flex;
+}
+[data-view ~= "inline-flex"]
+{
+  display:inline-flex;
+}
+[data-view ~= "inline-block"]
+{
+  display:inline-block;
+}
+[data-view ~= "vcenter"]
+{
+  align-items: center;
+  align-content: center;
+}
+
+[data-view ~= hcenter]
+{
+  text-align: center;
+  justify-content: center;
+}
+
+[data-view ~= full-screen]
+{
+  width: 100%;
+}
+/* exclusive classes*/
+
+
+                                          /* computer size  LG = 1200*/
+
+@media screen and (max-width: 1200px)
+{
+  .hide-until-lg, [data-view_until-lg ~='none']
+  {
+    display: none!important;
+  }
+
+  [data-padding-x_until-lg = 'xs']
+  {
+    padding-right :  var(--xs_boxing-size);
+    padding-left :  var(--xs_boxing-size);
+  }
+
+}
+@media screen and (min-width: 1201px)
+{
+  .show-until-lg, [data-view_from-lg ~='none']
+  {
+    display: none!important;
+  }
+}
+
+
+                                          /* Small Laptop size MD = 992 */
+
+
+@media screen and (max-width: 992px)
+{
+  .hide-until-md, [data-view_until-md ~='none']
+  {
+    display: none!important;
+  }
+
+  [data-padding-x_until-md = 'xs']
+  {
+    padding-right :  var(--xs_boxing-size);
+    padding-left :  var(--xs_boxing-size);
+  }
+
+}
+
+@media screen and (min-width: 993px)
+{
+  .hide-until-md, [data-view_until-md ~='none']
+  {
+    display: none!important;
+  }
+
+  [data-padding-x_until-md = 'xs']
+  {
+    padding-right :  var(--xs_boxing-size);
+    padding-left :  var(--xs_boxing-size);
+  }
+
+}
+
+                      /* Tablet size SM = 768*/
+
+
+
+                      /* Mobile size XS = 576*/
+
+@media screen and (min-width: 576px)
+{
+
+}

@@ -1,0 +1,30 @@
+footer
+{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    background-color:  var(--darker_primary-color);;
+    box-shadow: 0px -8px 9px var(--shadow_primary-color);
+    border-top: 2px solid var(--neon_light-color);
+    position: absolute;
+    z-index: 990;
+}
+
+footer>div.grid-container
+{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer ul
+{
+    margin:0;
+    padding: 0;
+}
+
+footer ul li
+{
+    list-style-type: none;
+    display: block;
+    margin: 5px 0;
+    padding:0
+}

@@ -1,0 +1,39 @@
+[data-name="cart-details"]
+{
+    padding: 30px;
+    position: fixed;
+    transition: left, .5s ease-out;
+    z-index: 997;
+    top: 75px;
+    background-color: var(--menu_background-color);
+    backdrop-filter: blur(7px);
+    width: 30%;
+}
+
+[data-name="cart-details"][data-open = false]
+{
+    right: calc(-30% - 65px);
+}
+
+[data-name="cart-details"][data-open = true]
+{
+    right: 0px;
+}
+
+[data-name="cart-details"] ul
+{
+    padding: 0;
+}
+
+
+[data-name="cart-details"] li
+{
+    list-style-type: none;
+}
+
+.form-close-button
+{
+    position: absolute;
+    top: 10px;
+    right: 12%;
+}

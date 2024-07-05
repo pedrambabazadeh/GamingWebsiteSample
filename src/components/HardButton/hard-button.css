@@ -1,0 +1,23 @@
+.hard-button-container
+{
+    border-radius:50%;
+    background-color: var(--very_dark-color);/*change to atomic*/
+    border: 2px solid var(--neon_light-color);
+    box-shadow: var(--md_secondary-shadow);/*change to atomic*/
+    align-content: center;/*change to atomic*/
+    align-items: center;/*change to atomic*/
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hard-button-container:active
+{
+    box-shadow: var(--md_primary-shadow)!important;
+}
+
+@keyframes shadow-changer
+{
+    33% {box-shadow: var(--md_secondary-shadow);}
+    66% {box-shadow: var(--md_primary-shadow);}
+    100% {box-shadow: var(--md_secondary-shadow);}
+}

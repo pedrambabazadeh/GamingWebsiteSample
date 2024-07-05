@@ -1,0 +1,53 @@
+.fixed-banner
+{
+    background-image: url("../../../public/Images/CoverBackSample.jpg");
+    background-attachment: fixed;
+    margin: 0 auto;
+    transition: 1.5s ease-out;
+}
+
+.cover-border-bottom, .cover-border-top
+{
+    position:relative;
+    height:40px;
+    background-color: var(--very_dark-color);
+}
+
+.cover-border-bottom
+{
+    top:-30px;
+    border-top: 2px solid var(--neon_light-color);
+    box-shadow: -4px -4px 5px var(--shadow_secondary-color);
+    border-top-left-radius: var(--sm_radius-size);
+    border-top-right-radius: var(--sm_radius-size);
+}
+.cover-border-bottom::after
+{
+    position:relative;
+    top:33px;
+    display:block;
+    height:15px;
+    width: 100%;
+    content: '';
+    background-color: var(--very_dark-color);
+}
+
+.cover-border-top
+{
+    top:30px;
+    border-bottom: 2px solid var(--neon_light-color);
+    box-shadow: 4px 4px 5px var(--shadow_secondary-color);
+    border-bottom-left-radius: var(--sm_radius-size);
+    border-bottom-right-radius: var(--sm_radius-size);
+}
+
+.cover-border-top::before
+{
+    position:relative;
+    top: -3px;
+    display:block;
+    height:15px;
+    width:100%;
+    content: '';
+    background-color: var(--very_dark-color);
+}

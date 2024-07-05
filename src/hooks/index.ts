@@ -1,0 +1,1 @@
+export {useSquare} from './ObjectCreator';

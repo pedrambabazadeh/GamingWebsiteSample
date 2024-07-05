@@ -1,0 +1,53 @@
+[data-name = "toggle-menu"]
+{
+    transition: left, .5s ease-out;
+    z-index: 997;
+    position:fixed;
+    top: 75px;
+    height: 100vh;
+    padding-top:30px;
+    background-color: var(--menu_background-color);
+    backdrop-filter: blur(7px);
+    width: 30%;
+}
+
+[data-name = "toggle-menu"] ul
+{
+    padding: unset;
+    margin:0;
+}
+
+[data-name = "toggle-menu"] >ul li
+{
+    padding: 5px 10px;
+    display:block;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+[data-name = "toggle-menu"][data-open = false]
+{
+    left: -50%;
+}
+
+[data-name = "toggle-menu"][data-open = true]
+{
+    left: 0;
+}
+
+
+[data-name = "light-dark"]
+{
+    display: flex;
+    padding-left: 10px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px)
+{
+    [data-name = "toggle-menu"]
+    {
+        width: 50%;
+    }
+}
